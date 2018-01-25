@@ -7,8 +7,13 @@
     <title>Vipanchika App</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
-    <script type="text/javascript" src="js/Calculate.js"></script>
+ //   <script type="text/javascript" src="js/Calculate.js"></script>
         <script type="text/javascript" src="js/search.js"></script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
   </head>
   <body>
 
@@ -63,11 +68,11 @@
           <h2>Slot 1</h2>
             <h3>Enter Result</h3>
             <div id="c11" class="radio">
-              <label><input type="radio" name="opt11radio" value=30>First</label>
+              <label><input type="radio" name="opt11radio" value=10>First</label>
          
-              <label><input type="radio" name="opt11radio" value=20>Second</label>
+              <label><input type="radio" name="opt11radio" value=6>Second</label>
         
-              <label><input type="radio" name="opt11radio" value=10>Third</label>
+              <label><input type="radio" name="opt11radio" value=2>Third</label>
             </div>
           
            <h3>Enter Grade</h3>  
@@ -79,6 +84,9 @@
               <label><input type="radio" name="opt12radio" value=3>C</label>
 
               <label><input type="radio" name="opt12radio" value=2>D</label>
+
+
+              <label><input type="radio" name="opt12radio" value=1s>E</label>
 
                <label><input type="radio" name="opt12radio" value=0>DQ</label>
             </div>
@@ -98,11 +106,11 @@
              <h2>Slot 2</h2>
             <h3>Enter Result</h3>
             <div id="c21" class="radio">
-              <label><input type="radio" name="opt21radio" value=30>First</label>
+              <label><input type="radio" name="opt21radio" value=10>First</label>
          
-              <label><input type="radio" name="opt21radio" value=20>Second</label>
+              <label><input type="radio" name="opt21radio" value=6>Second</label>
         
-              <label><input type="radio" name="opt21radio" value=10>Third</label>
+              <label><input type="radio" name="opt21radio" value=2>Third</label>
             </div>
         <h3>Enter Grade</h3>  
            <div id="c22" class="radio">
@@ -113,6 +121,8 @@
               <label><input type="radio" name="opt22radio" value=3>C</label>
 
               <label><input type="radio" name="opt22radio" value=2>D</label>
+
+               <label><input type="radio" name="opt22radio" value=1>E</label>
 
                <label><input type="radio" name="opt22radio" value=0>DQ</label>
             </div>
@@ -141,11 +151,11 @@
           <h2>Slot 1</h2>
             <h3>Enter Result</h3>
             <div id="c11" class="radio">
-              <label><input type="radio" name="opt11radio" value=30>First</label>
+              <label><input type="radio" name="opt11radio" value=5>First</label>
          
-              <label><input type="radio" name="opt11radio" value=20>Second</label>
-        
-              <label><input type="radio" name="opt11radio" value=10>Third</label>
+              <label><input type="radio" name="opt11radio" value=3>Second</label>
+       
+              <label><input type="radio" name="opt11radio" value=1>Third</label>
             </div>
           
            <h3>Enter Grade</h3>  
@@ -157,7 +167,7 @@
               <label><input type="radio" name="opt12radio" value=3>C</label>
 
               <label><input type="radio" name="opt12radio" value=2>D</label>
-
+              <label><input type="radio" name="opt12radio" value=1>E</label>
                <label><input type="radio" name="opt12radio" value=0>DQ</label>
             </div>
             <div id="submit">
@@ -170,18 +180,20 @@
               echo '<h3> Slot 1 Points : '.$row['P1'].'<button type="button" onclick="cl('.$PID.',1,1)" class="btn btn-link">Edit</button><h3>';
               echo '</div>';
               }
+            if($row["P2"]==-1)
+            {}
 
-            if($row["P2"]==NULL){
+            else if($row["P2"]==NULL){
             ?>
 
              <h2>Slot 2</h2>
             <h3>Enter Result</h3>
             <div id="c21" class="radio">
-              <label><input type="radio" name="opt21radio" value=30>First</label>
+              <label><input type="radio" name="opt21radio" value=5>First</label>
          
-              <label><input type="radio" name="opt21radio" value=20>Second</label>
+              <label><input type="radio" name="opt21radio" value=3>Second</label>
         
-              <label><input type="radio" name="opt21radio" value=10>Third</label>
+              <label><input type="radio" name="opt21radio" value=1>Third</label>
             </div>
         <h3>Enter Grade</h3>  
            <div id="c22" class="radio">
@@ -192,6 +204,8 @@
               <label><input type="radio" name="opt22radio" value=3>C</label>
 
               <label><input type="radio" name="opt22radio" value=2>D</label>
+
+               <label><input type="radio" name="opt22radio" value=1>E</label>
 
                <label><input type="radio" name="opt22radio" value=0>DQ</label>
             </div>
@@ -214,11 +228,11 @@
              <h2>Slot 3</h2>
             <h3>Enter Result</h3>
             <div id="c31" class="radio">
-              <label><input type="radio" name="opt31radio" value=30>First</label>
+              <label><input type="radio" name="opt31radio" value=5>First</label>
          
-              <label><input type="radio" name="opt31radio" value=20>Second</label>
+              <label><input type="radio" name="opt31radio" value=3>Second</label>
         
-              <label><input type="radio" name="opt31radio" value=10>Third</label>
+              <label><input type="radio" name="opt31radio" value=1>Third</label>
             </div>
         <h3>Enter Grade</h3>  
            <div id="c32" class="radio">
@@ -230,101 +244,28 @@
 
               <label><input type="radio" name="opt32radio" value=2>D</label>
 
+              <label><input type="radio" name="opt32radio" value=1>E</label>
+
                <label><input type="radio" name="opt32radio" value=0>DQ</label>
             </div>
             <div id="submit">
 
               <button onclick="myFunction3(<?php echo $PID ?>,3,1)" type="button" class="btn btn-success">Submit</button>
             </div>
+          
            <?php }
-            else
+            else if($row["P2"]!=-1)
             {
               echo '<div >';
               echo '<h3> Slot 3 Points : '.$row['P3'].'<button onclick="cl('.$PID.',3,1)" type="button" class="btn btn-link">Edit</button><h3>';
            //echo '<button class="link" type="button" class="btn btn-link">Edit</button>';
            echo '</div>';
              }
-
-              if($row["P4"]==NULL){
-            ?>
-
-             <h2>Slot 4</h2>
-            <h3>Enter Result</h3>
-            <div id="c41" class="radio">
-              <label><input type="radio" name="opt41radio" value=30>First</label>
-         
-              <label><input type="radio" name="opt41radio" value=20>Second</label>
-        
-              <label><input type="radio" name="opt41radio" value=10>Third</label>
-            </div>
-        <h3>Enter Grade</h3>  
-           <div id="c42" class="radio">
-              <label><input type="radio" name="opt42radio" value=5>A</label>
-         
-              <label><input type="radio" name="opt42radio" value=4>B</label>
-        
-              <label><input type="radio" name="opt42radio" value=3>C</label>
-
-              <label><input type="radio" name="opt42radio" value=2>D</label>
-
-               <label><input type="radio" name="opt42radio" value=0>DQ</label>
-            </div>
-            <div id="submit">
-
-              <button onclick="myFunction4(<?php echo $PID ?>,4,1)" type="button" class="btn btn-success">Submit</button>
-            </div>
-           <?php }
-            else
-            {
-              echo '<div >';
-              echo '<h3> Slot 4 Points : '.$row['P4'].'<button onclick="cl('.$PID.',4,1)" type="button" class="btn btn-link">Edit</button><h3>';
-           //echo '<button class="link" type="button" class="btn btn-link">Edit</button>';
-           echo '</div>';
-             }
-
-              if($row["P5"]==NULL){
-            ?>
-
-             <h2>Slot 5</h2>
-            <h3>Enter Result</h3>
-            <div id="c51" class="radio">
-              <label><input type="radio" name="opt51radio" value=30>First</label>
-         
-              <label><input type="radio" name="opt51radio" value=20>Second</label>
-        
-              <label><input type="radio" name="opt51radio" value=10>Third</label>
-            </div>
-        <h3>Enter Grade</h3>  
-           <div id="c52" class="radio">
-              <label><input type="radio" name="opt52radio" value=5>A</label>
-         
-              <label><input type="radio" name="opt52radio" value=4>B</label>
-        
-              <label><input type="radio" name="opt52radio" value=3>C</label>
-
-              <label><input type="radio" name="opt52radio" value=2>D</label>
-
-               <label><input type="radio" name="opt52radio" value=0>DQ</label>
-            </div>
-            <div id="submit">
-
-              <button onclick="myFunction5(<?php echo $PID ?>,5,1)" type="button" class="btn btn-success">Submit</button>
-            </div>
-           <?php }
-            else
-            {
-              echo '<div >';
-              echo '<h3> Slot 5 Points : '.$row['P2'].'<button onclick="cl('.$PID.',5,1)" type="button" class="btn btn-link">Edit</button><h3>';
-           //echo '<button class="link" type="button" class="btn btn-link">Edit</button>';
-           echo '</div>';
-             }
            }
             ?>
 
+           
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
-    <script src="js/bootstrap.min.js"></script>
 
     <script>
     var ch11 = document.getElementsByName('opt11radio');
@@ -414,13 +355,21 @@
     }
 
       function myFunction1(pid,S,T){
+        
            if(point12!=0)
            {
+
            var Total1 = parseInt(point11)+parseInt(point12);
             }
             else 
             Total1=0; 
-             $.ajax({ url: 'ajax1.php',
+         
+              
+          console.log(T)
+          console.log(S)
+              console.log(Total1)
+          console.log(pid)
+             $.ajax({ url: 'aj.php',
              data: {  'T' : T,
                       'Slot':S,
                       'total' : Total1,
@@ -452,6 +401,7 @@
       
       }
      function myFunction3(pid,S,T){
+            console.log("function 3")
             if(point32!=0)
            {
            var Total3 = parseInt(point31)+parseInt(point32);
@@ -520,6 +470,7 @@
              dataType:'json',
             });
              location.reload();
+             location.reload(); 
           }
            
       

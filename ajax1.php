@@ -1,6 +1,7 @@
 <?php   
   $total = $_POST['total'];
   $Pid = $_POST['Eid'];
+
   $T = $_POST['T'];
   $S = $_POST['Slot'];
   $con = new mysqli("localhost","my_user","my_password",'events');
